@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated example outputs
+examples/out/
+
+# MkDocs build output (docs/assets/gallery/ IS tracked — committed gallery images)
+site/
+.cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.code-workspace
+
+# Claude Code personal settings
+.claude/settings.local.json

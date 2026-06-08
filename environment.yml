@@ -1,0 +1,19 @@
+# Conda environment for building the paperplot docs (and running the showcase).
+#   conda env create -f environment.yml
+#   conda activate paperplot-docs
+#   python docs/generate_gallery.py && mkdocs serve
+name: paperplot-docs
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - matplotlib>=3.6
+  - numpy>=1.21
+  - pip
+  - pip:
+      - mkdocs-material>=9.5
+      - mkdocs-jupyter>=0.24
+      - jupytext>=1.16
+      - nbconvert>=7
+      - ipykernel>=6
+      - -e ".[notebook]"
