@@ -1,0 +1,123 @@
+# paperplot journal specifications (data, not code).
+# Edit the numbers here to update specs; bump `revision` when content changes.
+schema_version = 1
+
+# --- Physical Review (APS): PRL / PRX / PRB / PRA / PRApplied / PRResearch ---
+[journal.aps]
+name = "Physical Review"
+revision = "2024-01"
+page_height_mm = 235.0       # usable two-column text height on US-letter (REVTeX)
+caption_reserve_mm = 25.0    # vertical space kept free for the caption on full-page floats
+min_linewidth_pt = 0.5       # APS minimum line weight (0.18 mm)
+page_body_pt = 10.0          # REVTeX manuscript body text size (for preview_in_page)
+font_family = ["Arial", "Helvetica", "TeX Gyre Heros", "DejaVu Sans"]
+
+[journal.aps.widths_mm]
+single = 86.0                # 8.6 cm, 3 3/8 in
+onehalf = 120.0             # advisory, not a fixed APS spec
+double = 178.0              # 17.8 cm, 7 in
+
+[journal.aps.font_pt]
+base = 8.0
+tick = 7.5
+panel = 9.0
+legend = 7.5
+
+[journal.aps.rasterize_dpi]
+line = 600
+photo = 300
+
+# Variants share APS geometry; they override only what differs.
+[journal.aps.variants.prl]
+revision = "2024-01+prl"
+
+[journal.aps.variants.prx]
+revision = "2024-01+prx"
+
+[journal.aps.variants.prb]
+revision = "2024-01+prb"
+
+# --- Nature family ------------------------------------------------------------
+[journal.nature]
+name = "Nature"
+revision = "2024-01"
+page_height_mm = 170.0       # max figure height (leaves room for the legend)
+caption_reserve_mm = 0.0     # the 170 mm cap already excludes legend space
+min_linewidth_pt = 0.5
+page_body_pt = 9.0           # Nature manuscript body text size (for preview_in_page)
+font_family = ["Arial", "Helvetica", "TeX Gyre Heros", "DejaVu Sans"]
+
+[journal.nature.widths_mm]
+single = 89.0
+onehalf = 120.0
+double = 183.0
+
+[journal.nature.font_pt]
+base = 7.0                   # Nature: max 7 pt for figure body text
+tick = 6.5
+panel = 8.0                  # panel letters: 8 pt bold
+legend = 6.5
+min_warn_pt = 5.0           # Nature minimum text size
+min_cap_height_mm = 1.3
+
+[journal.nature.rasterize_dpi]
+line = 600
+photo = 300
+
+# --- IEEE (Transactions / conference two-column) ------------------------------
+[journal.ieee]
+name = "IEEE"
+revision = "2024-01"
+page_height_mm = 235.0       # usable column text height (US-letter, IEEEtran)
+caption_reserve_mm = 0.0
+min_linewidth_pt = 0.5
+page_body_pt = 10.0          # IEEEtran body text size (for preview_in_page)
+# IEEE figures are commonly Times; pass serif=True. This is the sans fallback.
+font_family = ["Arial", "Helvetica", "TeX Gyre Heros", "DejaVu Sans"]
+
+[journal.ieee.widths_mm]
+single = 88.9                # 3.5 in column
+onehalf = 120.0
+double = 181.9               # 7.16 in text width (2 x 3.5 in cols + 0.16 in gutter)
+
+[journal.ieee.font_pt]
+base = 8.0
+tick = 7.0
+panel = 9.0
+legend = 7.0
+min_warn_pt = 6.0
+min_cap_height_mm = 1.5
+
+[journal.ieee.rasterize_dpi]
+line = 600
+photo = 300
+
+# --- Presentation target (slides / talks) -------------------------------------
+# Not a journal: a sizing/typography target for projected figures. Larger type,
+# thicker lines (derived from min_linewidth_pt), wider default. preflight's
+# cap-height rule is irrelevant here, so the floor is set permissively.
+[journal.talk]
+name = "Presentation"
+revision = "2024-01"
+page_height_mm = 190.0       # ~16:9 slide content area
+caption_reserve_mm = 0.0
+min_linewidth_pt = 1.0       # thicker strokes survive projection
+page_body_pt = 18.0
+font_family = ["Arial", "Helvetica", "TeX Gyre Heros", "DejaVu Sans"]
+
+[journal.talk.widths_mm]
+single = 130.0               # half-slide figure
+onehalf = 180.0
+double = 240.0               # ~full-slide figure
+
+[journal.talk.font_pt]
+base = 18.0
+tick = 16.0
+panel = 20.0
+legend = 16.0
+min_warn_pt = 12.0
+min_cap_height_mm = 0.0
+
+[journal.talk.rasterize_dpi]
+line = 600
+photo = 200
