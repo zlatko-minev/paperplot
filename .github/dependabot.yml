@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Keep GitHub Actions current; pair with SHA-pinning for supply-chain hardening.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "ci"
+
+  # Python dependency bumps for the package + extras.
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "deps"

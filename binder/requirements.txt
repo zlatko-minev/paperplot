@@ -1,0 +1,5 @@
+# Binder builds the showcase notebook from this. binder/ takes precedence over the
+# repo-root environment.yml, so launches stay lean (no docs tooling).
+# "." installs paperplot (+ matplotlib/numpy) from the cloned repo; [notebook] adds
+# IPython for pp.show().
+.[notebook]
