@@ -37,7 +37,7 @@ Repository = "https://github.com/zlatko-minev/paperplot"
 Issues = "https://github.com/zlatko-minev/paperplot/issues"
 
 [project.optional-dependencies]
-notebook = ["IPython>=7"]
+notebook = ["IPython>=8.39.0"]
 seaborn = ["seaborn>=0.12"]
 dev = ["pytest>=7"]
 docs = [
