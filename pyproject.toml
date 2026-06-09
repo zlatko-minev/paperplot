@@ -38,7 +38,7 @@ Issues = "https://github.com/zlatko-minev/paperplot/issues"
 
 [project.optional-dependencies]
 notebook = ["IPython>=7"]
-seaborn = ["seaborn>=0.12"]
+seaborn = ["seaborn>=0.13.2"]
 dev = ["pytest>=7"]
 docs = [
     "mkdocs-material>=9.5",
