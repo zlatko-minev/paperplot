@@ -43,7 +43,7 @@ dev = ["pytest>=7"]
 docs = [
     "mkdocs-material>=9.5",
     "mkdocs-jupyter>=0.24",
-    "jupytext>=1.16",
+    "jupytext>=1.19.3",
     "nbconvert>=7",
     "ipykernel>=6",
 ]
