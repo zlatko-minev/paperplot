@@ -44,7 +44,7 @@ docs = [
     "mkdocs-material>=9.5",
     "mkdocs-jupyter>=0.24",
     "jupytext>=1.16",
-    "nbconvert>=7",
+    "nbconvert>=7.17.1",
     "ipykernel>=6",
 ]
 
